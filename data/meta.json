@@ -1,0 +1,22 @@
+{
+  "count": 2478,
+  "dim": 384,
+  "dtype": "float32",
+  "byteOrder": "little-endian",
+  "layout": "row-major [count][dim]",
+  "normalized": true,
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "modelRevision": "main",
+  "pooling": "mean",
+  "retrieved": "2026-06-24",
+  "sources": {
+    "helpcenter": {
+      "count": 78,
+      "license": "CC0-1.0"
+    },
+    "wikipedia": {
+      "count": 2400,
+      "license": "CC-BY-SA-4.0"
+    }
+  }
+}
