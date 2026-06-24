@@ -1,0 +1,37 @@
+{
+  "name": "semantic-grep",
+  "version": "1.0.0",
+  "description": "In-browser semantic search with a from-scratch HNSW vector index, benchmarked for recall against exact brute-force search.",
+  "type": "module",
+  "license": "MIT",
+  "author": "jonathon-lockridge",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare-corpus": "tsx scripts/prepare-corpus.ts",
+    "fetch-model": "tsx scripts/fetch-model.ts"
+  },
+  "keywords": [
+    "semantic-search",
+    "vector-search",
+    "hnsw",
+    "approximate-nearest-neighbor",
+    "embeddings",
+    "information-retrieval",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0"
+  }
+}
