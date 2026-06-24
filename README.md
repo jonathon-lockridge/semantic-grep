@@ -14,6 +14,10 @@ It runs entirely in your browser. No server, no ANN library.
 
 ### ▶ Live demo: **https://jonathon-lockridge.github.io/semantic-grep/**
 
+> The demo deploys automatically via GitHub Actions on every push to `main`. If
+> the link 404s, the Pages workflow hasn't completed its first run yet — it
+> deploys from Settings → Pages → Source: **GitHub Actions**.
+
 <p align="center">
   <img src="docs/search.png" alt="Semantic search: the query 'how do I cancel my subscription' returns 'Ending your plan' with no shared keywords" width="100%">
 </p>
