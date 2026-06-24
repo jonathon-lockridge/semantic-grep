@@ -23,7 +23,9 @@ import { l2Norm } from "../src/core/distance";
 import { Rng } from "../src/core/rng";
 import { HELP_CORPUS } from "./help-corpus";
 
-const DATA_DIR = resolve("data");
+// Committed corpus lives under public/ so Vite serves it as a static asset in
+// both dev and the production build (the runtime fetches it from ${BASE}data/).
+const DATA_DIR = resolve("public/data");
 const MODEL_PATH = resolve("public/models");
 const TARGET_WIKI = 2400; // bulk passages for benchmark scale
 const RETRIEVED = new Date().toISOString().slice(0, 10);
