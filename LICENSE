@@ -22,6 +22,12 @@ SOFTWARE.
 
 ---
 
-The corpus shipped under data/ has its own provenance and licensing; see
-data/SOURCE.md. The bundled embedding model under public/models/ is
-Xenova/all-MiniLM-L6-v2 (Apache-2.0), redistributed for offline query embedding.
+The MIT license above covers this project's own source code only. Bundled
+third-party assets keep their own licenses:
+
+- Corpus under public/data/ — the hand-authored help/explainer passages are
+  CC0-1.0; the Simple English Wikipedia passages are CC BY-SA 4.0 (© their
+  respective authors). See public/data/SOURCE.md for full provenance.
+- Embedding model under public/models/ — Xenova/all-MiniLM-L6-v2 (the
+  underlying all-MiniLM-L6-v2 is Apache-2.0), redistributed for offline query
+  embedding.
