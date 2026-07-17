@@ -12,8 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare-corpus": "tsx scripts/prepare-corpus.ts",
-    "fetch-model": "tsx scripts/fetch-model.ts"
+    "prepare-corpus": "tsx scripts/prepare-corpus.ts"
   },
   "keywords": [
     "semantic-search",
