@@ -60,7 +60,10 @@ Brute force costs **2,478** evaluations per query (one per vector). At the defau
 `efSearch=64`, HNSW reaches **99.4% recall using ~39% of the work** — and as you
 turn the knob down it trades a little accuracy for a lot more speed. Recall climbs
 to a perfect **1.0 by `efSearch=128`**, where the search has effectively
-degenerated to exhaustive. _These exact numbers are reproducible with `npm test`._
+degenerated to exhaustive. _These exact numbers are reproducible two ways:
+[`realcorpus.test.ts`](test/realcorpus.test.ts) (part of `npm test`) replays the
+committed embeddings and query vectors and asserts every cell of this table, and
+the demo's **Benchmark** tab measures the same numbers live in your browser._
 
 <p align="center">
   <img src="docs/benchmark.png" alt="Benchmark panel: recall@10 99.4% at 2.6x speedup, the recall-vs-speed tradeoff curve, and distance-eval bars" width="100%">
@@ -97,6 +100,10 @@ This is the project's signature: nothing about retrieval quality is taken on
 faith. The full suite is **deterministic and network-free** (`npm test`,
 [`test/`](test/)):
 
+- **The real-corpus table above** — the index is rebuilt from the committed
+  embeddings with the demo's exact parameters (seed included) and every cell of
+  the benchmark table is asserted, not just a floor.
+  ([`realcorpus.test.ts`](test/realcorpus.test.ts))
 - **Recall vs the exact oracle** — HNSW results are compared to brute-force ground
   truth and recall@k is _measured_. Asserted to clear a target at the default
   `efSearch` and to reach **1.0 at `efSearch ≥ N`**. ([`recall.test.ts`](test/recall.test.ts))
